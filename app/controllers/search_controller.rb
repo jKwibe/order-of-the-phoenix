@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    binding.pry
+    @members = FetchService.new.to_objects.select { |character| character.house == params[:house] }
   end
 end

@@ -1,0 +1,11 @@
+<h1>Search#index</h1>
+<h1> Total number of Members <%= @members.size %></h1>
+<% @members.each do |member| %>
+<section>
+  <h1>Name: <%= member.name %></h1>
+  <p>Role: <%= member.role %></p>
+  <p>House: <%= member.house %></p>
+  <p>Patronus: <%= member.patronus %></p>
+</section>
+  <hr>
+<% end %>

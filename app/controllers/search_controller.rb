@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @members = FetchService.new.to_objects.select { |character| character.house == params[:house] }
+    @members = CharacterFacade.new.house_members(params[:house])
   end
 end

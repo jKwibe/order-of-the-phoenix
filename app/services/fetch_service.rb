@@ -1,4 +1,13 @@
 class FetchService
+  def to_objects
+    characters.map do |character|
+      Member.new(character)
+    end
+  end
+
+  def characters
+    to_json('characters')
+  end
 
   private
   def to_json(url_endpoint)
